@@ -58,6 +58,29 @@ if (heroToggles.length && pillarCards.length && pillarsSection) {
   });
 }
 
+// Past Performance tabs
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabPanels = document.querySelectorAll(".tab-panel");
+
+if (tabButtons.length && tabPanels.length) {
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetPanel = button.getAttribute("data-tab-target");
+
+      // Update active button
+      tabButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn === button);
+      });
+
+      // Update active panel
+      tabPanels.forEach((panel) => {
+        const panelId = panel.getAttribute("data-tab-panel");
+        panel.classList.toggle("active", panelId === targetPanel);
+      });
+    });
+  });
+}
+
 // Past Performance carousels (lazy-susan style)
 const carousels = document.querySelectorAll(".project-carousel");
 
