@@ -302,20 +302,21 @@ body {
 
 .stat-number {
   display: block;
-  font-size: 1.3rem;
+  font-size: 2.0rem;
   font-weight: 600;
   color: var(--accent);
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 1.15rem;
   color: var(--muted);
 }
 
 /* ============ Past Performance ============ */
 .past-performance {
   padding-block: 3.8rem;
-  background: var(--bg);
+/*  background: var(--bg); */ /* This was the original background */
+  background: var(--bg-soft);  /* This now matches the Why Con and Gen work together */
 }
 
 .tabs {
@@ -510,6 +511,10 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
+.why-image {
+  margin-top: 2rem;
+}
+
 .why-image img {
   width: 100%;
   max-width: 420px;
@@ -523,6 +528,8 @@ body {
 /* ============ Services ============ */
 .services {
   padding-block: 3.5rem;
+  /* background was original set to default */
+  background: var(--bg);  /* this changed to Past Performance bg */
 }
 
 .services-grid {
@@ -546,6 +553,7 @@ body {
 .service-column li {
   margin-bottom: 1rem;
   font-size: 0.92rem;
+/*  color: var(--muted); */
   color: var(--muted);
 }
 
@@ -556,7 +564,7 @@ body {
 /* ============ About ============ */
 .about {
   padding-block: 3.5rem;
-  background: var(--bg-alt);
+/*  background: var(--bg-alt); */  /* This was original for About, removing gives the default; original How we work.. background  */
 }
 
 .about-grid {
@@ -588,13 +596,15 @@ body {
 /* ============ Contact ============ */
 .contact {
   padding-block: 3.5rem;
+  /* background was original set to default */
+  background: var(--bg-alt);
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1.1fr 1.1fr;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .contact-form {
@@ -602,6 +612,7 @@ body {
   border-radius: var(--radius-lg);
   padding: 1.8rem 1.6rem;
   border: 1px solid #262626;
+  margin-top: 11rem;
 }
 
 .form-row {
@@ -714,5 +725,4 @@ body {
     width: 100%;
     justify-content: space-between;
   }
-
-  .tab-b
+}
